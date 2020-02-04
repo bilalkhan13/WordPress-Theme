@@ -16,23 +16,21 @@
 <meta charset="UTF-8">
 <html>
 <head>
-    <title>
-    <?php echo get_the_title();?> |
-    <?php bloginfo("name")?>
-    </title>
-    <?php include_once 'function.php'; ?>
     <?php wp_head()?>
-    
 </head>
 <body>
-<div class="site-main container">
-<header class="site-header">
-<div class="site-branding">
-<nav class="site-navigation">
-</nav>
-</div>
-</header>
-</div>
+<div class="site-main container"> <!-- close in footer-->
+    <header class="site-header">
+        <div class="site-branding">
+            <?php the_custom_logo() ?>
+        </div>
+    </header>
+    <nav class="site-navigation">
+        <?php wp_nav_menu(array(
+            'theme_location' => 'primary'
+        ));
+        ?>
+    </nav>
 
 <!-- <script type="text/javascript">
 jQuery(document).ready(function($){

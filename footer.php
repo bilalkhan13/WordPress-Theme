@@ -12,6 +12,18 @@
  * @see       Link to project website
  */
 ?>
-<?php wp_footer() ?>
+
+<footer class="site-footer">
+    <div class="footer-widgets">
+        <div calss="widget-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        </div>
+        <div calss="widget-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        </div>
+        <div calss="widget-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        </div>
+    </div>
+</footer>
+</div> <!-- Closing Main Container-->
 </body>
+<?php wp_footer() ?> 
 </html>

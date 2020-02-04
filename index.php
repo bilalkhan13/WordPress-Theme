@@ -14,30 +14,29 @@
 get_header();
 ?>
 
+<div class="home-main">
+    <div class="row mr-0 ml-0">
+        <div class="home-posts col-8">
+    <!--Display Content via loop-->
+    <?php
+    if (have_posts()) :
+        while (have_posts()) :
+            the_post();
+    ?>
+            <h1><?php the_title()?> </h1>
+            <p><?php the_content()?> </p>
+    <?php
+        endwhile;
+    endif;
+    ?>
+    </div>
+    <div class="home-sidebar col-lg-4">
+        <?php get_sidebar();?>
+        </div>
+    </div>
+ </div>
 
-<div class="container">
-<!-- include Template Part-->
-<?php get_template_part('template-parts/home', 'featured') ?>
-<!--Include File-->
-<img src="<?php echo get_theme_file_uri();?>/assets/img/abc.png">
-<!--Display Content via loop-->
 <?php
-if (have_posts()) :
-    while (have_posts()) :
-         the_post();
-?>
-        <h1><?php the_title()?> </h1>
-<?php
-    endwhile;
-endif;
-?>
-</div>
-
-
-
-
-
-<?php
-get_sidebar();
 get_footer();
 ?>
+
