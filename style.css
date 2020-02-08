@@ -47,13 +47,35 @@ Use it to make something cool, have fun, and share what you've learned with othe
         height: 60px;
 }
 .site-navigation ul{
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    clear: both;
+    text-align: center;
 } 
 
-.site-navigation li{
-    text-decoration: none;
+.site-navigation ul li{
+    display: inline-block;
+    height: 60px;
+    margin-left: -4px;
 } 
 
+.site-navigation ul li a{
+    display: inline-block;
+    height: 100%;
+    padding: 0 40px;
+    line-height: 60px;
+    color: #f0f0f0;
+    border-right: 1px solid #83cb8d;
+} 
+.site-navigation ul li a:hover{
+    text-decoration: none;
+    background: rgba(0,0,0,0.7);
+}
+.site-navigation ul li:first-child a{
+    border-left: 1px-solid-#83cb8d;
+} 
 /*********************
 03: home-content
 *********************/
@@ -70,7 +92,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .home-sidebar{
     background-color: #ddd;
 }
-
+.widget-title{
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    color: #f0f0f0;
+    text-align: center;
+}
+.widget{
+    text-align: center;
+}
 
 /*********************
 05: Footer
