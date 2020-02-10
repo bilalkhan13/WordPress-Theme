@@ -57,10 +57,13 @@ add_action('after_setup_theme', 'bilal_theme_setup');
 /*Include Style Sheet and Scripts || Hook */
 function bilal_theme_scripts()
 {
-    wp_enqueue_style('bootstrap-css', get_template_directory_uri().'/assets/bootstrap/css/bootstrap.min.css'); /* Bootstrap add before our file*/
+    wp_enqueue_style('bootstrap-css', get_template_directory_uri().'/assets/bootstrap/css/bootstrap.min.css'); /** Bootstrap add before our file*/
+    wp_enqueue_style('owl-carousel-css', get_template_directory_uri().'/owl-carousel/assets/owl.carousel.min.css');
     wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap-js', get_template_directory_uri().'/assets/bootstrap/js/bootstrap.min.js');
+        wp_enqueue_script('owl-carousel-js', get_template_directory_uri().'/owl-carousel/owl.carousel.min.js');
+    wp_enqueue_script('my-js', get_template_directory_uri().'/assets/js/my.js');
 } /* Unique Name set if our inset multiple Sheets*/
 
 /*Run Hook Location*/
@@ -108,3 +111,7 @@ add_action('widgets_init', 'bilal_widgets_init');
 require get_template_directory().'/inc/customizer.php';
 //Include Custom Post Types
 require get_template_directory().'/inc/services.php';
+//Include Custom Post Types Project
+require get_template_directory().'/inc/projects.php';
+//Include Custom Post Types MetaBox
+require get_template_directory().'/inc/url-Metabox.php';

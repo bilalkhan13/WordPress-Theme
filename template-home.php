@@ -66,6 +66,33 @@ get_header();
                     ?>
                     <?wp_reset_postdata(); ?>
     </div>
+
+    <div class="home-carousel row ml-0 mr-0 mt-5">
+        <div class="owl-carousel">
+            <?php
+                    $args= array(
+                        /*from cat edit */
+                        'post_type' => 'owl',
+                        'post_per_page' => 10,
+                        'order' => 'ASC'
+                    );
+                    $tech_posts= new WP_Query($args);
+                    if ($tech_posts->have_posts()) :
+                        while ($tech_posts->have_posts()) :
+                            $tech_posts->the_post();
+                    ?>
+                    <div>
+                        <?php  $project_url=get_post_meta(get_the_ID(), 'typeyoururl_21100', 'true')?>
+                        <a href="<?php echo $project_url ?>" target="_blank"><?php the_post_thumbnail('medium')?></a>
+                    </div>
+                    <?php
+                        endwhile;
+                    endif;
+                    ?>
+                    <?wp_reset_postdata(); ?>
+        </div>
+    </div>                
+
     <div class="home-posts row ml-0 mr-0 mt-5">
         <!--Display Content via loop-->
         <div class="col">

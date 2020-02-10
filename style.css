@@ -173,6 +173,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
   .service-thumb{
       margin-bottom: 10px;
   }
+  .owl-nav{
+      text-align: center;
+  }
+  .owl-nav button{
+    display: inline-block !important;
+    font-size: 50px !important;
+    margin: 0 10px !important;
+    padding: 10px 10px 20px 10px !important;
+    background: #f8f8f8 !important;
+    min-width: 50px !important;
+    line-height: 1 !important;
+}
 /* .home-post img{
     max-width: 100%;
     max-height: 300px;
