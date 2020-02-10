@@ -1,8 +1,8 @@
 <?php
 /**
- * Page.php
+ * Template-About.php
  * PHP Version 7.2.24
- *theme
+ * Template Name: About Template
  * @category  Components
  * @package   Wordpress
  * @author    Bilal Ahmad Khan <bilalahmad.nts@gmail.com>
@@ -14,9 +14,9 @@
  */
 get_header();
 ?>
-   <div class="custom-header">
-       <img src= "<?php header_image();?>" width="<?php echo absint(get_custom_header())->width ?>"
-       weight="<?php echo absint(get_custom_header())->height ?>" class="img-fluid">
+   <div class="page-custom-header">
+        <?php $img_url = get_the_post_thumbnail_url(get_the_ID(), 'full') ?>
+        <img src="<?php echo $img_url?>" alt="<?php echo get_the_title()?>" class="img-fluid">
     </div>
     <div class="flex-row ml-0 mr-0 mt-3">
         <!--Display Content via loop-->

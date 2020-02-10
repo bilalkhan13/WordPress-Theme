@@ -14,12 +14,15 @@
 ?>
 
 <footer class="site-footer">
-    <div class="footer-widgets">
-        <div calss="widget-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <div class="row ml-0 mr-0 footer-widgets">
+        <div calss="widget widget-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <?php dynamic_sidebar('footer-1'); ?>
         </div>
-        <div calss="widget-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div calss="widget widget-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <?php dynamic_sidebar('footer-2'); ?>
         </div>
-        <div calss="widget-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div calss="widget widget-col col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <?php dynamic_sidebar('footer-3'); ?>
         </div>
     </div>
 </footer>

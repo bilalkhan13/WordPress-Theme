@@ -17,6 +17,14 @@
 <html>
 <head>
     <?php wp_head()?>
+    <style type="text/css">
+        body{
+            background: <?php echo get_theme_mod('wplearning_body_bg_color', '#fff')?>
+        }
+        .site-navigation{
+            background: <?php echo get_theme_mod('wplearning_nav_bg_color', '#2ca358')?>
+        }
+    </style>
 </head>
 <body>
 <div class="site-main container"> <!-- close in footer-->

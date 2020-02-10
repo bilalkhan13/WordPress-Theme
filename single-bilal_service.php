@@ -20,9 +20,7 @@ get_header();
     if (have_posts()) :
         while (have_posts()) :
             the_post();?>
-        <div class="post-image">
-            <?php the_post_thumbnail('home-featured')?>
-        </div>
+       
         <div class="post-title">
             <h1><?php the_title()?></h1>
         </div>
